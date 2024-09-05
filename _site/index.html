@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="DESCRIPTION META TAG">
+  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
+  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
+  <meta property="og:url" content="URL OF THE WEBSITE"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+
+  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>PE-RLHF</title>
+  <link rel="icon" type="image/x-icon" href="static/images/logo.png">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <!-- <h1 class="title is-1 publication-title">Trustworthy Human-AI Collaboration: Reinforcement Learning with Human
+              Feedback and Physics Knowledge for Safe Autonomous Driving</h1> -->
+              <h1 style="font-size: 32px; font-weight: bold;">Trustworthy Human-AI Collaboration: Reinforcement Learning with Human
+                Feedback and Physics Knowledge for Safe Autonomous Driving</h1>  
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block">
+                <a href="https://scholar.google.com/citations?user=RgO7ppoAAAAJ&hl=en" target="_blank">Zilin Huang</a>,</span>
+                <span class="author-block">
+                  <a href="https://scholar.google.com/citations?user=3T-SILsAAAAJ&hl=en" target="_blank">Zihao Sheng</a>,</span>
+                    <span class="author-block">
+                      <a href="https://scholar.google.com/citations?user=DPN2wc4AAAAJ&hl=en" target="_blank">Sikai Chen</a><sup>*</sup>
+                      </span>
+                  </div>
+
+                  <div class="is-size-5 publication-authors">
+                    <span class="author-block">University of Wisconsin-Madison</span>
+                    <span class="eql-cntrb"><small><br><sup>*</sup>Corresponding Author</small></span>
+                  </div>
+
+                  <div class="column has-text-centered">
+                    <div class="publication-links">
+                    
+                    <!-- ArXiv abstract Link -->
+                    <span class="link-block">
+                      <a href="https://arxiv.org/abs/2409.00858" target="_blank"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="ai ai-arxiv"></i>
+                      </span>
+                      <span>arXiv</span>
+                    </a>
+                  </span>                    
+                    
+                      <!-- Github link -->
+                    <span class="link-block">
+                      <a href="https://github.com/zilin-huang/PE-RLHF" target="_blank"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fab fa-github"></i>
+                      </span>
+                      <span>Code</span>
+                    </a>
+                  </span>
+
+                    <!-- Video link -->
+                    <span class="link-block">
+                      <a href="https://www.youtube.com/embed/7TQ5ZCrqtfI?si=r6HAMMDa3XVdAITO" target="_blank"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fas fa-video"></i> <!-- Video icon -->
+                      </span>
+                      <span>Video</span>
+                    </a>
+                  </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Teaser video-->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <!-- Wrapper for the two videos with flexbox layout -->
+      <div style="display: flex; justify-content: space-between;">
+        <!-- First video with its own title -->
+        <div style="width: 48%; text-align: center;">
+          <video poster="" id="tree1" autoplay controls muted loop style="width: 100%;">
+            <source src="static/videos/RLHF.mp4" type="video/mp4">
+          </video>
+          <h2 class="subtitle" style="font-size: 15px;">
+            The effectiveness of traditional RLHF methods is highly dependent on the quality of human feedback. Expert-level human feedback is usually required. when human mentors make mistakes, it may lead to training oscillation or even failure.          </h2>          
+        </div>
+        <!-- Second video with its own title -->
+        <div style="width: 48%; text-align: center;">
+          <video poster="" id="tree2" autoplay controls muted loop style="width: 100%;">
+            <source src="static/videos/Our PE-RLHF.mp4" type="video/mp4">
+          </video>
+          <h2 class="subtitle" style="font-size: 15px;">
+           PE-RLHF method maintains the strengths of RLHF, while utilizing physics knowledge to guarantee a trustworthy safety performance lower bound, even when human feedback quality deteriorates due to various factors (e.g., distractions or fatigue).
+          </h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End teaser video -->
+
+
+<!-- Summary Section -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container" style="max-width: 990px; margin: auto; padding: 20px; background-color: white; border-radius: 8px; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);">
+      <h2 class="title is-3" style="font-size: 24px; text-align: left;">Summary</h2>
+      <div class="content" style="font-size: 15px; text-align: justify;">
+        <p><strong>Physics-enhanced Reinforcement Learning with Human Feedback (PE-RLHF)</strong> is designed for safe and trustworthy autonomous driving.</p>
+        <ul>
+          <li>PE-RLHF is a novel framework that synergistically integrates human feedback with physics knowledge into the RL training loop.</li>
+          <li>PE-RLHF introduces a new human-AI collaborative paradigm that ensures a trustworthy safety performance lower bound.</li>
+          <li>PE-RLHF employs a reward-free approach with a proxy value function to represent human preferences and guide training process.</li>
+        </ul>
+        <p>In extensive experiments across various driving scenarios:</p>
+        <ul>
+          <li>PE-RLHF significantly reduces safety violations, demonstrating superior performance compared to traditional methods.</li>
+          <li>PE-RLHF significantly improves learning efficiency, enabling faster policy development compared to traditional RL methods.</li>
+          <li>PE-RLHF adapts to different levels of human feedback quality, ensuring robust performance.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<!-- Title Only -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3" style="font-size: 24px; max-width: 70%; margin: auto; text-align: left;">Demo</h2> <!-- Title for the image -->
+    </div>
+  </div>
+</section>
+
+
+<!-- Teaser video-->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <!-- Wrapper for the two videos with flexbox layout -->
+      <div style="display: flex; justify-content: space-between;">
+        <!-- First video with its own title -->
+        <div style="width: 48%; text-align: center;">
+          <video poster="" id="tree1" autoplay controls muted loop style="width: 100%;">
+            <source src="static/videos/Professional mentor (train).mp4" type="video/mp4">
+          </video>
+          <h2 class="subtitle" style="font-size: 15px;">
+            Training phase (professional mentor)         
+          </h2>          
+        </div>
+        <!-- Second video with its own title -->
+        <div style="width: 48%; text-align: center;">
+          <video poster="" id="tree2" autoplay controls muted loop style="width: 100%;">
+            <source src="static/videos/Professional mentor (test).mp4" type="video/mp4">
+          </video>
+          <h2 class="subtitle" style="font-size: 15px;">
+            Testing phase (professional mentor)           
+          </h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End teaser video -->
+
+
+<!-- Teaser video-->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <!-- Wrapper for the two videos with flexbox layout -->
+      <div style="display: flex; justify-content: space-between;">
+        <!-- First video with its own title -->
+        <div style="width: 48%; text-align: center;">
+          <video poster="" id="tree1" autoplay controls muted loop style="width: 100%;">
+            <source src="static/videos/Amateur mentor (train).mp4" type="video/mp4">
+          </video>
+          <h2 class="subtitle" style="font-size: 15px;">
+            Training phase (amateur mentor)         
+          </h2>          
+        </div>
+        <!-- Second video with its own title -->
+        <div style="width: 48%; text-align: center;">
+          <video poster="" id="tree2" autoplay controls muted loop style="width: 100%;">
+            <source src="static/videos/Amateur mentor (test).mp4" type="video/mp4">
+          </video>
+          <h2 class="subtitle" style="font-size: 15px;">
+            Testing phase (amateur mentor)           
+          </h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End teaser video -->
+
+
+
+<!-- Teaser video-->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <!-- Single video with title -->
+      <div style="width: 75%; text-align: center; margin: auto;">
+        <video poster="" id="tree1" autoplay controls muted loop style="width: 100%;">
+          <source src="static/videos/Mentor compare.mp4" type="video/mp4">
+        </video>
+        <h2 class="subtitle" style="font-size: 15px;">
+          Despite the decline in amateur mentor’ feedback quality, the performance of PE-RLHF is still superior compared to other methods, attributable to the injection of physical knowledge.        
+        </h2>          
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End teaser video -->
+
+
+
+
+<!-- Single Image with Title and Shadowed Container -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container" style="max-width: 990px; margin: auto; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); padding: 20px; background-color: white; border-radius: 8px;">
+      <h2 class="title is-3" style="font-size: 24px; text-align: left;">Overview</h2> <!-- Title for the image -->
+      <br>
+      <div class="image-container has-text-centered" style="max-width: 100%; margin: auto;">
+        <!-- Your image here with adjusted width -->
+        <img src="static/images/fig1.png" alt="Descriptive Alt Text" style="width: 100%; height: auto;"/>
+      </div>
+      <div class="subtitle-container" style="max-width: 100%; margin: auto;">
+        <h2 class="subtitle" style="font-size: 15px; text-align: justify;">
+          (a) IL faces two significant issues in practical applications: distribution shift and limitations in asymptotic performance. Training safety and sampling efficiency are the two major bottlenecks constraining RL methods. Additionally, designing an appropriate reward function to capture all desired driving behaviors can be challenging. 
+          (b) Reinforcement Learning from Human Feedback (RLHF) method has proven effective in enhancing both training safety and sampling efficiency in RL. Most studies require expert-level human feedback. Also, few studies have focused on the trustworthiness of RLHF-enabled methods. 
+          (c) In this work, we propose a novel framework named Physics-enhanced Reinforcement Learning to bridge this gap.
+        </h2>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<!-- Single Image with Title and Shadowed Container -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container" style="max-width: 990px; margin: auto; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); padding: 20px; background-color: white; border-radius: 8px;">
+      <h2 class="title is-3" style="font-size: 24px; text-align: left;">Motivation</h2> <!-- Title for the image -->
+      <br>
+      <div class="image-container has-text-centered" style="max-width: 80%; margin: auto;">
+        <!-- Your image here with adjusted width -->
+        <img src="static/images/fig2.png" alt="Descriptive Alt Text" style="width: 100%; height: auto;"/>
+      </div>
+      <div class="subtitle-container" style="max-width: 100%; margin: auto;">
+        <h2 class="subtitle" style="font-size: 15px; text-align: justify;">
+          (a) When learning a foreign language, a student may be guided by two mentors: a native speaker and a grammar book. 
+          When the native speaker’s explanations are unclear, learners can refer to grammar books as a reliable reference.
+          As a result, the student’s language skills are improved by learning from both mentors.
+          Similarly, in transportation science, there is well-established physics knowledge (e.g., traffic flow models).
+          (b) Inspired by the human learning process, we propose the Physics-enhanced Human-AI (PE-HAI) Collaborative Paradigm. 
+          We use the actions of a physics-based model when the quality of human feedback deteriorates due to fatigue or distraction. We design an action selection mechanism to determine whether the human action or the physics-based model should be applied to the environment.
+        </h2>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- Single Image with Title and Shadowed Container -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container" style="max-width: 990px; margin: auto; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); padding: 20px; background-color: white; border-radius: 8px;">
+      <h2 class="title is-3" style="font-size: 24px; text-align: left;">Action Selection Mechanism</h2> <!-- Title for the image -->
+      <br>
+      <div class="image-container has-text-centered" style="max-width: 55%; margin: auto;">
+        <!-- Your image here with adjusted width -->
+        <img src="static/images/fig3.png" alt="Descriptive Alt Text" style="width: 100%; height: auto;"/>
+      </div>
+      <div class="subtitle-container" style="max-width: 100%; margin: auto;">
+        <h2 class="subtitle" style="font-size: 15px; text-align: justify;">
+          In a roadblock avoidance scenario, traditional RL methods would collide with the roadblock before learning to avoid it.
+          In PE-HAI, humans perceive danger and take over, making a left lane change. However, humans may subsequently make erroneous maneuvers such as deviating from the road.
+          In this case, PE-HAI switches to the physics-based action, thus ensuring training safety. Finally, the agent learns a safe and efficient obstacle avoidance strategy from this hybrid policy.
+        </h2>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- Single Image with Title and Shadowed Container -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container" style="max-width: 990px; margin: auto; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); padding: 20px; background-color: white; border-radius: 8px;">
+      <h2 class="title is-3" style="font-size: 24px; text-align: left;">Framework</h2> <!-- Title for the image -->
+      <br>
+      <div class="image-container has-text-centered" style="max-width: 70%; margin: auto;">
+        <!-- Your image here with adjusted width -->
+        <img src="static/images/fig4.png" alt="Descriptive Alt Text" style="width: 100%; height: auto;"/>
+      </div>
+      <div class="subtitle-container" style="max-width: 100%; margin: auto;">
+        <h2 class="subtitle" style="font-size: 15px; text-align: justify;">
+          The PE-RLHF framework consists of five parts: (a) Observation space and action space, (b) Reward-free actor-critic architecture, (c) Learning from hybrid intervention action, (d) Learning from exploration with entropy regularization, and (e) Reducing the human mentor’s cognitive load.
+        </h2>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Single Image with Title and Shadowed Container -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container" style="max-width: 990px; margin: auto; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); padding: 20px; background-color: white; border-radius: 8px;">
+      <h2 class="title is-3" style="font-size: 24px; text-align: left;">Experiment</h2> <!-- Title for the image -->
+      <br>
+      <div class="image-container has-text-centered" style="max-width: 80%; margin: auto;">
+        <!-- Your image here with adjusted width -->
+        <img src="static/images/Tab1.jpg" alt="Descriptive Alt Text" style="width: 100%; height: auto;"/>
+      </div>
+      <div class="subtitle-container" style="max-width: 100%; margin: auto;">
+        <h2 class="subtitle" style="font-size: 15px; text-align: justify;">
+        PE-RLHF demonstrated trustworthy safety improvement, achieving an episodic safety cost of 0.47, which significantly outperforms the standalone IDM-MOBIL model and other advance RLHF methods. Moreover, PE-RLHF exhibited high sampling efficiency, reducing the required training data by 74% and training time from over 30 hours to just 1 hour compared to traditional RL methods.         
+      </h2>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- Youtube video with Title and Shadowed Container -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container" style="max-width: 990px; margin: auto; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); padding: 20px; background-color: white; border-radius: 8px;">
+      <h2 class="title is-3" style="font-size: 24px; text-align: left;">Introduction Video</h2> <!-- Title for the video -->
+      <br>
+      <div class="video-container has-text-centered" style="max-width: 100%; margin: auto;">
+        <!-- Your YouTube video here with adjusted width and height -->
+        <iframe src="https://www.youtube.com/embed/7TQ5ZCrqtfI?si=r6HAMMDa3XVdAITO" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen style="width: 100%; height: 600px;"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End youtube video -->
+
+
+
+
+<!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@article{huang2024trustworthy,
+        title={Trustworthy Human-AI Collaboration: Reinforcement Learning with Human Feedback and Physics Knowledge for Safe Autonomous Driving},
+        author={Huang, Zilin and Sheng, Zihao and Chen, Sikai},
+        journal={arXiv preprint arXiv:2409.00858},
+        year={2024}
+      }
+      </code></pre>
+    </div>
+</section>
+<!--End BibTex citation -->
+
+
+<div style="width: 600px; height: 250px; margin: auto;">
+  <script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=m1DxWyzges8kFu41lystioF4TBS2TuDqd4XLCpHMtOM&cl=ffffff&w=a"></script>
+</div>
+
+
+  </body>
+  </html>
